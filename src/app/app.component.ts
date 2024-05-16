@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+
+declare var $:any;
+
+declare function initPageEcommerce([]):any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +12,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularWithEcommerce';
+
+  constructor(){
+    setTimeout(() =>{
+      initPageEcommerce($);    
+    },50);
+
+  }
+
 }
