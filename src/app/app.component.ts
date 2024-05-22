@@ -14,9 +14,6 @@ export class AppComponent {
   title = 'AngularWithEcommerce';
 
   constructor(){
-    setTimeout(() =>{
-      initPageEcommerce($);    
-    },50);
 
   }
 

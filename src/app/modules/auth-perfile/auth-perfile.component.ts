@@ -5,18 +5,15 @@ declare var $:any;
 declare function initPageEcommerce([]):any;
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-auth-perfile',
+  templateUrl: './auth-perfile.component.html',
+  styleUrls: ['./auth-perfile.component.css']
 })
-export class HomeComponent {
+export class AuthPerfileComponent {
 
-  constructor(){}
-  
   ngOnInit(): void {
     setTimeout(() =>{
       initPageEcommerce($);    
     },50);
-
   }
 }
