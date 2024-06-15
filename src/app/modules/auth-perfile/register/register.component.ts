@@ -17,13 +17,15 @@ export class RegisterComponent {
 
     constructor(
       private authService: AuthService,
-      private router:Router ,
+      private router:Router,
     ){
 
     }
 
-    ngOnInit(){
-
+    ngOnInit(): void{
+      if(this.authService.user  && this.authService.token){
+        this.router.navigate(['/']);
+      }
     }
 
     registro(){

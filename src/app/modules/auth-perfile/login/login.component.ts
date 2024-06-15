@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +13,16 @@ export class LoginComponent {
   password:any = null;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ){
 
+  }
+
+  ngOnInit(): void{
+    if(this.authService.user  && this.authService.token){
+      this.router.navigate(['/']);
+    }
   }
 
   login(){
