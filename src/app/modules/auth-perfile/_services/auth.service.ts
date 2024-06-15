@@ -57,9 +57,12 @@ export class AuthService {
   }
 
 
-  registro(email: string, password:string){
+  registro(data:any){
     let URL = URL_SERVICIOS + '/users/register';
-    return this.http.post(URL,{email,password});
+    let a = this.http.post(URL,data);
+    console.log(a);
+
+    return this.http.post(URL,data);
   }
 
   logout(){
