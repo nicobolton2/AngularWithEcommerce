@@ -35,7 +35,7 @@ export class LoginComponent {
         //logeado
         document.location.reload();
       }else{
-        if(resp.error.error == 'Unauthorized' || resp.error.message == 'Unauthorized'){
+        if(resp.error.error == 'Unauthorized' || resp.error.message == 'Unauthenticated.'){
           alert('User unauthorized');
           return; 
         }
