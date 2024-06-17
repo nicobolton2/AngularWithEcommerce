@@ -45,12 +45,10 @@ export class RegisterComponent {
         email: this.email,
         password: this.password,
         password_confirmation: this.password_confirmation,
+        type_user: 1,
       };
 
-      console.log(data);
       this.authService.registro(data).subscribe((resp:any) => {
-        console.log(resp);
-        document.location.reload();+
         this.router.navigate(['auth/login']);
       })
     }
